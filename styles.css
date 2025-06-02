@@ -18,8 +18,8 @@ body.dark {
 body {
   font-family: 'Segoe UI', system-ui, sans-serif;
   line-height: 1.6;
-  margin: 0;
-  padding: 0;
+  /* margin: 1;
+  padding: 1; */
   background-color: var(--background);
   color: var(--text);
   transition: background-color 0.3s, color 0.3s;
