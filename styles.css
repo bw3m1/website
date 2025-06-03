@@ -5,6 +5,9 @@
   --text: #333333;
   --border: #e1e1e1;
   --toc-width: 300px;
+  --link-unviseted: #007acc;
+  --link-viseted: #099;
+  --link-hover: rgb(216, 24, 21)
 }
 
 body.dark {
@@ -13,6 +16,10 @@ body.dark {
   --background: #1e1e1e;
   --text: #d4d4d4;
   --border: #444;
+  --link-unviseted: #00ff9d;
+  --link-viseted: #00977e;
+  --link-hover: rgb(216, 24, 21);
+
 }
 
 body {
@@ -117,18 +124,26 @@ pre {
 }
 
 a {
-  color: #00ff9d;
+  color: var(--link-unviseted);
   text-underline-offset: 100000000vh;
 }
 
 a:visited {
-  color: #00977e;
+  color: var(--link-viseted);
+}
+
+a:hover {
+  color: var(--link-hover);
 }
 
 h1 .menu-bar-action {
   float: right;
   text-align: right;
   margin-left: 10px;
+}
+
+h1 .menu-bar-action:hover {
+  background: rgba(0, 122, 204, 0.05);
 }
 
 .card {
@@ -159,6 +174,9 @@ h1 .menu-bar-action {
   float: right;
   text-align: right;
   margin-left: 10px;
+}
+.toc h3 .menu-bar-action:hover {
+  background: (0, 122, 204, 0.05);
 }
 
 .toc a {
