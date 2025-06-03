@@ -143,26 +143,6 @@ pre {
   margin: 5px 0;
 }
 
-.vscode-feature {
-  background: rgba(0, 122, 204, 0.03);
-  border: 1px solid rgba(0, 122, 204, 0.1);
-  padding: 15px;
-  margin: 15px 0;
-  border-radius: 5px;
-}
-
-.vscode-feature h4 {
-  margin-top: 0;
-  display: flex;
-  align-items: center;
-}
-
-.vscode-feature h4::before {
-  content: "✓";
-  color: var(--primary);
-  margin-right: 8px;
-}
-
 .external-link {
   color: var(--primary);
   text-decoration: underline;
