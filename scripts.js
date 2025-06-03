@@ -4,6 +4,7 @@
   const tocToggle = document.getElementById('tocToggle');
   const tocLinks = document.querySelectorAll('.toc a');
   const sections = document.querySelectorAll('section');
+//  const tocCSS = document.
   let hintTimeout;
 
   // Apply system theme
@@ -15,6 +16,8 @@
   // Toggle TOC visibility
   function toggleTOC() {
     tocContainer.classList.toggle('visible');
+    //  of orse i have no idea what i'm doing but something like
+    //  tocCSS.setAtrib(width: calc(100% - var(--toc-width)))
   }
 
   // Initialize
