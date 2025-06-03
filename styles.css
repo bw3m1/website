@@ -7,7 +7,10 @@
   --toc-width: 300px;
   --link-unviseted: #007acc;
   --link-viseted: #099;
-  --link-hover: rgb(216, 24, 21)
+  --link-hover: rgb(216, 24, 21);
+  --hover: rgba(0, 122, 204, 0.05);
+  --highlight: rgba(0, 122, 204, 0.2);
+  --code-pre: rgba(0, 122, 204, 0.1);
 }
 
 body.dark {
@@ -19,6 +22,9 @@ body.dark {
   --link-unviseted: #00ff9d;
   --link-viseted: #00977e;
   --link-hover: rgb(216, 24, 21);
+  --hover: rgba(0, 204, 126, 0.05);
+  --highlight: rgba(0, 204, 126, 0.2);
+  --code-pre: rgba(0, 204, 126, 0.1);
 }
 
 body {
@@ -111,7 +117,7 @@ h3 {
 }
 
 code, pre {
-  background: rgba(0, 122, 204, 0.1);
+  background: var(--code-pre);
   padding: 2px 5px;
   border-radius: 3px;
   font-family: 'Consolas', monospace;
@@ -142,11 +148,11 @@ h1 .menu-bar-action {
 }
 
 h1 .menu-bar-action:hover {
-  background: rgba(0, 122, 204, 0.05);
+  background: var(--hover);
 }
 
 .card {
-  background: rgba(0, 122, 204, 0.05);
+  background: var(--hover);
   border-left: 3px solid var(--primary);
   padding: 15px;
   margin: 15px 0;
@@ -192,7 +198,7 @@ h1 .menu-bar-action:hover {
 .toc a:hover {
   color: var(--primary);
   border-left: 2px solid var(--primary);
-  background: rgba(0, 122, 204, 0.05);
+  background: var(--hover);
 }
 
 .toc ul {
@@ -214,7 +220,7 @@ h1 .menu-bar-action:hover {
 
 @keyframes highlight {
   from {
-    background-color: rgba(0, 122, 204, 0.2);
+    background-color: var(--highlight);
   }
 
   to {
