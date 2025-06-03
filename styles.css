@@ -19,7 +19,6 @@ body.dark {
   --link-unviseted: #00ff9d;
   --link-viseted: #00977e;
   --link-hover: rgb(216, 24, 21);
-
 }
 
 body {
@@ -175,6 +174,7 @@ h1 .menu-bar-action:hover {
   text-align: right;
   margin-left: 10px;
 }
+
 .toc h3 .menu-bar-action:hover {
   background: (0, 122, 204, 0.05);
 }

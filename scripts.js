@@ -4,7 +4,6 @@
   const tocToggle = document.getElementById('tocToggle');
   const tocLinks = document.querySelectorAll('.toc a');
   const sections = document.querySelectorAll('section');
-//  const tocCSS = document.
   let hintTimeout;
 
   // Apply system theme
@@ -16,8 +15,15 @@
   // Toggle TOC visibility
   function toggleTOC() {
     tocContainer.classList.toggle('visible');
-    //  of orse i have no idea what i'm doing but something like
-    //  tocCSS.setAtrib(width: calc(100% - var(--toc-width)))
+    // Adjust main content width when TOC is visible
+    const mainContent = document.querySelector('main');
+    if (mainContent) {
+      if (tocContainer.classList.contains('visible')) {
+        mainContent.style.width = 'calc(100% - var(--toc-width))';
+      } else {
+        mainContent.style.width = '';
+      }
+    }
   }
 
   // Initialize
@@ -34,7 +40,7 @@
     // Set up elements with data-action="toggle-toc"
     const tocTogglers = document.querySelectorAll('[data-action="toggle-toc"]');
     tocTogglers.forEach(toggler => {
-      toggler.addEventListener('click', function(e) {
+      toggler.addEventListener('click', function (e) {
         e.preventDefault();
         toggleTOC();
       });
@@ -52,10 +58,10 @@
     document.addEventListener('click', function (e) {
       if (window.innerWidth <= 1200) {
         const isClickOnToggler = (
-          (tocToggle && tocToggle.contains(e.target)) || 
+          (tocToggle && tocToggle.contains(e.target)) ||
           e.target.closest('[data-action="toggle-toc"]')
         );
-        
+
         if (!tocContainer.contains(e.target) && !isClickOnToggler) {
           tocContainer.classList.remove('visible');
         }
