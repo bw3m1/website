@@ -16,7 +16,7 @@ body.dark {
 }
 
 body {
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-family: monospace, system-ui;
   line-height: 1.6;
   margin: 0;
   padding: 0;
