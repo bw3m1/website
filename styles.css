@@ -116,6 +116,15 @@ pre {
   overflow-x: auto;
 }
 
+a {
+  color: #00ff9d;
+  text-underline-offset: 100000000vh;
+}
+
+a:visited {
+  color: #00977e;
+}
+
 .card {
   background: rgba(0, 122, 204, 0.05);
   border-left: 3px solid var(--primary);
