@@ -5,14 +5,18 @@
   const tocLinks = document.querySelectorAll('.toc a');
   const sections = document.querySelectorAll('section');
 
-    // Apply system theme
-    function applySystemTheme() {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      document.body.classList.toggle('dark', prefersDark);
-    }
+  // Apply system theme
+  function applySystemTheme() {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.body.classList.toggle('dark', prefersDark);
+  }
 
   // Toggle TOC visibility
   function toggleTOC() {
+    if (!tocContainer) {
+      console.error('TOC container not found');
+      return;
+    }
     tocContainer.classList.toggle('visible');
     // Adjust main content width when TOC is visible
     const mainContent = document.querySelector('main');
@@ -44,7 +48,7 @@
     } else if (name === "toggle-toc") {
       const toggleToc = document.getElementById("toggle-toc");
       toggleToc.setAttribute('src', getIcon("toggle-toc"));
-    }  else if (name === "close-toc") {
+    } else if (name === "close-toc") {
       const toggleToc = document.getElementById("close-toc");
       toggleToc.setAttribute('src', getIcon("close-toc"));
     } else {
