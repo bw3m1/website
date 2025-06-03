@@ -4,13 +4,13 @@
   const tocToggle = document.getElementById('tocToggle');
   const tocLinks = document.querySelectorAll('.toc a');
   const sections = document.querySelectorAll('section');
-  let hintTimeout;
+  const theme = 'light';
 
-  // Apply system theme
-  function applySystemTheme() {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    document.body.classList.toggle('dark', prefersDark);
-  }
+    // Apply system theme
+    function applySystemTheme() {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.body.classList.toggle('dark', prefersDark);
+    }
 
   // Toggle TOC visibility
   function toggleTOC() {
@@ -26,11 +26,41 @@
     }
   }
 
+  function getIcon(name) {
+    const isDark = document.body.classList.contains('dark');
+    if (name === "home") {
+      return isDark ? "../icons/home_dark.svg" : "../icons/home_light.svg";
+    } else if (name === "toggle-toc") {
+      return isDark ? "../icons/toggle_toc_dark.svg" : "../icons/toggle_toc_light.svg";
+    }
+    return '';
+  }
+
+  function setIcon(name) {
+    if (name === "home") {
+      const home = document.getElementById("home");
+      home.setAttribute('src', getIcon("home"));
+    } else if (name === "toggle-toc") {
+      const toggleToc = document.getElementById("toggle-toc");
+      toggleToc.setAttribute('src', getIcon("toggle-toc"));
+    } else {
+      console.error("icon name invalid");
+    }
+  }
+
   // Initialize
   function init() {
     // Set up theme
     applySystemTheme();
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applySystemTheme);
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+      applySystemTheme();
+      setIcon("home");
+      setIcon("toggle-toc");
+    });
+
+    // Set initial icons
+    setIcon("home");
+    setIcon("toggle-toc");
 
     // Set up TOC toggle button
     if (tocToggle) {
