@@ -4,7 +4,7 @@
   --background: #ffffff;
   --text: #333333;
   --border: #e1e1e1;
-  --toc-width: 250px;
+  --toc-width: 300px;
 }
 
 body.dark {
@@ -125,6 +125,12 @@ a:visited {
   color: #00977e;
 }
 
+h1 .menu-bar-action {
+  float: right;
+  text-align: right;
+  margin-left: 10px;
+}
+
 .card {
   background: rgba(0, 122, 204, 0.05);
   border-left: 3px solid var(--primary);
@@ -147,6 +153,12 @@ a:visited {
 .toc h3 {
   margin-top: 0;
   margin-bottom: 15px;
+}
+
+.toc h3 .menu-bar-action {
+  float: right;
+  text-align: right;
+  margin-left: 10px;
 }
 
 .toc a {

@@ -28,6 +28,15 @@
       tocToggle.addEventListener('click', toggleTOC);
     }
 
+    // Set up elements with data-action="toggle-toc"
+    const tocTogglers = document.querySelectorAll('[data-action="toggle-toc"]');
+    tocTogglers.forEach(toggler => {
+      toggler.addEventListener('click', function(e) {
+        e.preventDefault();
+        toggleTOC();
+      });
+    });
+
     // Toggle with 'c' key
     document.addEventListener('keydown', function (e) {
       if (e.key === 'c' || e.key === 'C') {
@@ -36,12 +45,17 @@
       }
     });
 
-    // Close TOC when clicking outside on mobile
+    // Close TOC when clicking outside on mobile (ignore toggle elements)
     document.addEventListener('click', function (e) {
-      if (window.innerWidth <= 1200 &&
-        !tocContainer.contains(e.target) &&
-        e.target !== tocToggle) {
-        tocContainer.classList.remove('visible');
+      if (window.innerWidth <= 1200) {
+        const isClickOnToggler = (
+          (tocToggle && tocToggle.contains(e.target)) || 
+          e.target.closest('[data-action="toggle-toc"]')
+        );
+        
+        if (!tocContainer.contains(e.target) && !isClickOnToggler) {
+          tocContainer.classList.remove('visible');
+        }
       }
     });
 
