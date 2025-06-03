@@ -4,7 +4,6 @@
   const tocToggle = document.getElementById('tocToggle');
   const tocLinks = document.querySelectorAll('.toc a');
   const sections = document.querySelectorAll('section');
-  const theme = 'light';
 
     // Apply system theme
     function applySystemTheme() {
@@ -32,6 +31,8 @@
       return isDark ? "../icons/home_dark.svg" : "../icons/home_light.svg";
     } else if (name === "toggle-toc") {
       return isDark ? "../icons/toggle_toc_dark.svg" : "../icons/toggle_toc_light.svg";
+    } else if (name === "close-toc") {
+      return isDark ? "../icons/close_toc_dark.svg" : "../icons/close_toc_light.svg";
     }
     return '';
   }
@@ -43,6 +44,9 @@
     } else if (name === "toggle-toc") {
       const toggleToc = document.getElementById("toggle-toc");
       toggleToc.setAttribute('src', getIcon("toggle-toc"));
+    }  else if (name === "close-toc") {
+      const toggleToc = document.getElementById("close-toc");
+      toggleToc.setAttribute('src', getIcon("close-toc"));
     } else {
       console.error("icon name invalid");
     }
@@ -56,11 +60,13 @@
       applySystemTheme();
       setIcon("home");
       setIcon("toggle-toc");
+      setIcon("close-toc");
     });
 
     // Set initial icons
     setIcon("home");
     setIcon("toggle-toc");
+    setIcon("close-toc");
 
     // Set up TOC toggle button
     if (tocToggle) {
