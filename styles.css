@@ -231,3 +231,8 @@ h1 .menu-bar-action:hover {
 .highlight {
   animation: highlight 1.5s ease-out;
 }
+
+.linklist-braket {
+  color: gold;
+  display: inline;
+}
