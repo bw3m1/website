@@ -1,86 +1,87 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Web Based Programs</title>
-    <link rel="icon" type="image/png" href="../icons/tab_icon.png">
-    <link rel="stylesheet" href="../styles.css">
-  </head>
-  <body>
-    <div class="main-container">
-      <div class="toc-container" id="tocContainer">
-        <div class="toc">
-          <h3>
-            Table of Contents
-            <div class="menu-bar-action" data-action="toggle-toc">
-              <img id="close-toc" src="../icons/close_toc.svg" alt="toc"
-                style="height: 17px; padding: 0; margin: 0;">
+    <head>
+        <meta charset="UTF-8">
+        <title>Web-Based Programs</title>
+        <link rel="icon" type="image/png" href="../icons/tab_icon.png">
+        <link rel="stylesheet" href="../styles.css">
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="toc-container" id="tocContainer">
+                <div class="toc">
+                    <h3>
+                        Table of Contents
+                        <div class="menu-bar-action" data-action="toggle-toc">
+                            <img id="close-toc" src="../icons/close_toc.svg" alt="Close menu"
+                    style="height: 17px; padding: 0; margin: 0;">
+                        </div>
+                    </h3>
+                    <a href="#init">Introduction</a>
+                    <a href="#html-IDE">HTML IDE</a>
+                    <!-- <a href="#attractors">Strange Attractors</a> -->
+                </div>
             </div>
-          </h3>
-          <a href="#init">intro</a>
-          <a href="#html-IDE">html IDE</a>
-          <!-- <a href="#atractors">Atractors</a> -->
+            <div class="content-wrapper">
+                <h1>
+                    My Web-Based Projects
+                    <div class="menu-bar-action">
+                        <a href="../index.html" style="color: #3794ff;">
+                            <img id="home" src="../icons/home_light.svg" alt="Home"
+                    style="height: 0px; padding: 0; margin: 0;">
+                        </a>
+                    </div>
+                    <div class="menu-bar-action" data-action="toggle-toc">
+                        <img id="toggle-toc" src="../icons/toggle_toc_light.svg" alt="Open menu"
+                style="height: 35px; padding: 0; margin: 0;">
+                    </div>
+                </h1>
+                <div id="init">
+                    As I've been diving into full-stack web development,<br>
+            I've created several tools that might be useful to others.<br>
+            This page serves as a collection of those projects.<br>
+                    <br>
+            Here's what I've built so far:
+                </div>
+                <br>
+                <br>
+                <br>
+                <div id="html-IDE">
+                    <h2>
+                        Multi-Language Code Editor
+                    </h2>
+                    My primary project is a browser-based code editor<br>
+            that began as an HTML IDE but now supports multiple languages.<br>
+            While it's not the lightest tool, it gets the job done.<br>
+                    <br>
+            Download options:
+                    <ul>
+                        <a href="https://github.com/bw3m1/html_ide/archive/refs/heads/main.zip">
+                            Direct download (2.41 MB)
+                        </a>
+                    </ul>
+                    More information:
+                    <ul>
+                        <a href="https://github.com/bw3m1/html_ide" target="_blank">
+                            GitHub repository
+                        </a>
+                        <br>
+                        <a href="https://raw.githubusercontent.com/bw3m1/html_ide/refs/heads/main/README.md" target="_blank">
+                            Go Directly to its README.md
+                        </a>
+                    </ul>
+                </div>
+                <br>
+                <br>
+                <br>
+                <!-- <div id="attractors">
+            <h2>
+                Strange Attractors Visualization
+            </h2>
+            [Content coming soon]
+            </div> -->
+            </div>
         </div>
-      </div>
-      <div class="content-wrapper">
-        <h1>
-          My Web Based Programs
-          <div class="menu-bar-action">
-            <a href="../index.html" style="color: #3794ff;">
-              <img id="home" src="../icons/home_light.svg" alt="home"
-                style="height: 0px; padding: 0; margin: 0;">
-            </a>
-          </div>
-          <div class="menu-bar-action" data-action="toggle-toc">
-            <img id="toggle-toc" src="../icons/toggle_toc_light.svg" alt="toc"
-              style="height: 35px; padding: 0; margin: 0;">
-          </div>
-        </h1>
-        <div id="init">
-          iv been geting it to web dev (full stack)<br>
-          thats why you see this webside after all <br>
-          but this page is mostly just a list of my projects<br>
-          <br>
-          so without ferther adew heres the list.
-        </div>
-        <br>
-        <br>
-        <br>
-        <div id="html-IDE">
-          <h2>
-            html IDE
-          </h2>
-          One main project I have worked on is my "html" IDE,
-          <br>
-          it was origenaly for html but now it soports all difrent lengs,
-          <br>
-          it may be a bit boated and load slowly but it works well.
-          <br>
-          <br>
-          to download it ( 2.41 MB ), click this
-          <ul>
-            <a href="https://github.com/bw3m1/html_ide/archive/refs/heads/main.zip">
-              download it
-            </a>
-          </ul>
-          to read more on its... whatnot go to
-          <ul>
-            <a href="https://github.com/bw3m1/html_ide" target="_blank">
-              its github page
-            </a>
-          </ul>
-        </div>
-        <br>
-        <br>
-        <br>
-        <!-- <div id="atractors">
-          <h2>
-            Strange Atractors
-          </h2>
-          i have a 
-        </div> -->
-      </div>
-    </div>
-    <script src="../scripts.js"></script>
-  </body>
+        <script src="../scripts.js"></script>
+    </body>
 </html>
