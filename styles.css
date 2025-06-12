@@ -7,10 +7,10 @@
   --toc-width: 300px;
   --link-unviseted: #007acc;
   --link-viseted: #099;
-  --link-hover: rgb(216, 24, 21);
-  --hover: rgba(0, 122, 204, 0.05);
-  --highlight: rgba(0, 122, 204, 0.2);
-  --code-pre: rgba(0, 122, 204, 0.1);
+  --link-hover: #d81815;
+  --hover: #007acc0d;
+  --highlight: #007acc33;
+  --code-pre: #007acc1a;
 }
 
 body.dark {
@@ -21,10 +21,10 @@ body.dark {
   --border: #444;
   --link-unviseted: #00ff9d;
   --link-viseted: #00977e;
-  --link-hover: rgb(216, 24, 21);
-  --hover: rgba(0, 204, 126, 0.05);
-  --highlight: rgba(0, 204, 126, 0.2);
-  --code-pre: rgba(0, 204, 126, 0.1);
+  --link-hover: #d81815;
+  --hover: #00cc7e0d;
+  --highlight: #00cc7e33;
+  --code-pre: #00cc7e1a;
 }
 
 body {
