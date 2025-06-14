@@ -1,2 +1,2 @@
 # website
-my main online derectory
+My main online directory
