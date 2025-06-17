@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Web-Based Programs</title>
         <link rel="icon" type="image/png" href="../icons/tab_icon.png">
         <link rel="stylesheet" href="../styles.css">
@@ -13,26 +14,25 @@
                     <h3>
                         Table of Contents
                         <div class="menu-bar-action" data-action="toggle-toc">
-                            <img id="close-toc" src="../icons/close_toc.svg" alt="Close menu"
-                            style="height: 17px; padding: 0; margin: 0;">
+                            <img id="close-toc" src="../icons/close_toc.svg" alt="Close menu">
                         </div>
                     </h3>
-                    <a href="#init">Introduction</a>
-                    <a href="#html-IDE">HTML IDE</a>
+                    <ul>
+                        <li><a href="#init" class="active">Introduction</a></li>
+                        <li><a href="#html-IDE">HTML IDE</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="content-wrapper">
                 <h1>
                     My Web-Based Projects
                     <div class="menu-bar-action">
-                        <a href="../pages/PRGZ.html" style="color: #3794ff;">
-                            <img id="home" src="../icons/home_light.svg" alt="Home"
-                            style="height: 0px; padding: 0; margin: 0;">
+                        <a href="../pages/PRGZ.html" class="home-link">
+                            <img id="home" src="../icons/home_light.svg" alt="Home">
                         </a>
                     </div>
                     <div class="menu-bar-action" data-action="toggle-toc">
-                        <img id="toggle-toc" src="../icons/toggle_toc_light.svg" alt="Open menu"
-                    style="height: 35px; padding: 0; margin: 0;">
+                    <img id="toggle-toc" src="../icons/toggle_toc_light.svg" alt="Open menu">
                     </div>
                 </h1>
                 <div id="init">
@@ -63,23 +63,30 @@
                     While it may not be the lightest tool, it's pretty good at getting the job done.
                     <br>
                     <br>
-                    Download options:
-                    <ul>
-                        <a href="https://github.com/bw3m1/html_ide/archive/refs/heads/main.zip">
-                            Direct download (2.41 MB)
-                        </a>
-                    </ul>
-                    More information:
-                    <ul>
-                        <a href="https://github.com/bw3m1/html_ide" target="_blank">
-                            GitHub repository
-                        </a>
-                        <br>
-                        <a href="https://raw.githubusercontent.com/bw3m1/html_ide/refs/heads/main/README.md"
-                            target="_blank">
-                            Go Directly to its README.md
-                        </a>
-                    </ul>
+                    <section class="feature-card">
+                        <h4>Download options:</h4>
+                        <ul>
+                            <li>
+                                <a href="https://github.com/bw3m1/html_ide/archive/refs/heads/main.zip">
+                                    Direct download (2.41 MB)
+                                </a>
+                            </li>
+                        </ul>
+                        <h4>More information:</h4>
+                        <ul>
+                            <li>
+                                <a href="https://github.com/bw3m1/html_ide" target="_blank" rel="noopener" class="external-link">
+                                    GitHub repository
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://raw.githubusercontent.com/bw3m1/html_ide/refs/heads/main/README.md"
+                                    target="_blank" rel="noopener" class="external-link">
+                                    Go Directly to its README.md
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
                 </div>
 <!--
                 <div id="tetris">

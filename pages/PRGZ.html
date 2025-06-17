@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Programs</title>
     <link rel="icon" type="image/png" href="../icons/tab_icon.png">
     <link rel="stylesheet" href="../styles.css">
@@ -13,48 +14,48 @@
           <h3>
             Table of Contents
             <div class="menu-bar-action" data-action="toggle-toc">
-              <img id="close-toc" src="../icons/close_toc.svg" alt="toc"
-                style="height: 17px; padding: 0; margin: 0;">
+              <img id="close-toc" src="../icons/close_toc.svg" alt="toc" class="toc-close-img">
             </div>
           </h3>
-          <a href="#python">Python</a>
-          <a href="#web-dev">Web Developmint</a>
+          <ul>
+            <li><a href="#python">Python</a></li>
+            <li><a href="#web-dev">Web Development</a></li>
+          </ul>
         </div>
       </div>
       <div class="content-wrapper">
         <h1>
           My Programs
           <div class="menu-bar-action">
-            <a href="../index.html" style="color: #3794ff;">
-              <img id="home" src="../icons/home_light.svg" alt="home"
-                style="height: 0px; padding: 0; margin: 0;">
+            <a href="../index.html" class="home-link">
+              <img id="home" src="../icons/home_light.svg" alt="home" class="icon-home">
             </a>
           </div>
           <div class="menu-bar-action" data-action="toggle-toc">
-            <img id="toggle-toc" src="../icons/toggle_toc_light.svg" alt="toc"
-              style="height: 35px; padding: 0; margin: 0;">
+            <img id="toggle-toc" src="../icons/toggle_toc_light.svg" alt="toc" class="toggle-toc-img">
           </div>
         </h1>
-        <div id="python">
+        <section class="feature-card" id="python">
+          <h4>Python Programs</h4>
           I have a bunch of python / pygame programs
           <br>
           To view them, go to
           <br>
           <ul>
-            <a href="PY.html" target="_blank">My Python Programs</a>
+            <li><a href="PY.html" class="external-link">My Python Programs</a></li>
           </ul>
-        </div>
-        <br>
-        <br>
-        <div id="web-dev">
+        </section>
+
+        <section class="feature-card" id="web-dev">
+          <h4>Web Development</h4>
           I've also got a fair number of web projects
           <br>
           Check that out at
           <br>
           <ul>
-            <a href="WD.html" target="_blank">My Web Based Programs</a>
+            <li><a href="WD.html" class="external-link">My Web Based Programs</a></li>
           </ul>
-        </div>
+        </section>
       </div>
     </div>
     <script src="../scripts.js"></script>

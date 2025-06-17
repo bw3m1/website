@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link rel="icon" type="image/png" href="../icons/tab_icon.png">
     <link rel="stylesheet" href="../styles.css">
@@ -13,68 +14,65 @@
           <h3>
             Table of Contents
             <div class="menu-bar-action" data-action="toggle-toc">
-              <img id="close-toc" src="../icons/close_toc.svg" alt="toc"
-                style="height: 17px; padding: 0; margin: 0;">
+              <img id="close-toc" src="../icons/close_toc.svg" alt="toc">
             </div>
           </h3>
-          <a href="#ido">What I do</a>
-          <a href="#e">Ferther Readme</a>
-          <a href="#contact-slash-gh">My Contact / GitHub</a>
+          <ul>
+            <li><a href="#ido">What I do</a></li>
+            <li><a href="#e">Further Info</a></li>
+            <li><a href="#contact-slash-gh">Contact / GitHub</a></li>
+          </ul>
         </div>
       </div>
       <div class="content-wrapper">
         <h1>
           About
           <div class="menu-bar-action">
-            <a href="../index.html" style="color: #3794ff;">
-              <img id="home" src="../icons/home_light.svg" alt="home"
-                style="height: 35px; padding: 0; margin: 0;">
+            <a href="../index.html" class="home-link">
+              <img id="home" src="../icons/home_light.svg" alt="home">
             </a>
           </div>
           <div class="menu-bar-action" data-action="toggle-toc">
-            <img id="toggle-toc" src="../icons/toggle_toc_light.svg" alt="toc"
-              style="height: 35px; padding: 0; margin: 0;">
+            <img id="toggle-toc" src="../icons/toggle_toc_light.svg" alt="toc">
           </div>
         </h1>
-        <div id="ido">
+        <section class="feature-card" id="ido">
+          <h4>About Me</h4>
           Hey, I'm Bryson.
           <br>
           I am interested in: 
-          <br>
           <ul>
-              math,
-            <br>
-              programming ( and computer-ing in general),
-            <br>
-              gaming,
-            <br>
-              physics ( of all forms ),
-            <br>
-              sci-fi and world-building
+            <li>Math</li>
+            <li>Programming (and computing in general)</li>
+            <li>Gaming</li>
+            <li>Physics (of all forms)</li>
+            <li>Sci-fi and world-building</li>
           </ul>
-        </div>
-        <div id="e">
+        </section>
+
+        <section class="feature-card" id="e">
+          <h4>Current Status</h4>
           I'm 12 and in 6th grade, going into 7th grade
-        </div>
-        <br>
-        <br>
-        <div id="contact-slash-gh">
+        </section>
+
+        <section class="feature-card" id="contact-slash-gh">
+          <h4>Contact & Links</h4>
           Here's my contact info and GitHub profile:
-          <br>
           <ul>
-            <a rel="noopener noreferrer"
-              href="https://mail.google.com/mail/u/0/?fs=1&to=Bw3m@proton.me&tf=cm"
-              target="_blank">
-              Gmail Me
-            </a>
-            <br>
-            <a
-              href="https://github.com/bw3m1"
-              target="_blank">
-              Look at my GitHub
-            </a>
+            <li>
+              <a rel="noopener noreferrer" href="https://mail.google.com/mail/u/0/?fs=1&to=Bw3m@proton.me&tf=cm"
+                target="_blank" class="external-link">Gmail Me</a>
+            </li>
+            <li>
+              <a href="https://github.com/bw3m1" target="_blank" rel="noopener" class="external-link">Look at my GitHub</a>
+            </li>
           </ul>
-        </div>
+        </section>
+      </div>
+    </div>
+    <script src="../scripts.js"></script>
+  </body>
+</html>
       </div>
     </div>
     <script src="../scripts.js"></script>

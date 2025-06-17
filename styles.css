@@ -58,6 +58,9 @@ body {
   overflow-y: auto;
   padding: 20px;
   box-sizing: border-box;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(var(--background), 0.95);
 }
 
 .toc-container.visible {
@@ -151,12 +154,18 @@ h1 .menu-bar-action:hover {
   background: var(--hover);
 }
 
-.card {
+.card, .feature-card {
   background: var(--hover);
   border-left: 3px solid var(--primary);
-  padding: 15px;
-  margin: 15px 0;
+  padding: 20px;
+  margin: 30px 0;
   border-radius: 0 3px 3px 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover, .feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .shortcut {
@@ -187,18 +196,20 @@ h1 .menu-bar-action:hover {
 
 .toc a {
   display: block;
-  padding: 8px 0 8px 10px;
+  padding: 12px 0 12px 15px;
   color: var(--text);
   text-decoration: none;
   border-left: 2px solid transparent;
   transition: all 0.2s;
-  margin: 3px 0;
+  margin: 8px 0;
+  border-radius: 4px;
 }
 
-.toc a:hover {
+.toc a.active {
   color: var(--primary);
-  border-left: 2px solid var(--primary);
+  font-weight: bold;
   background: var(--hover);
+  border-left: 2px solid var(--primary);
 }
 
 .toc ul {
@@ -235,4 +246,210 @@ h1 .menu-bar-action:hover {
 .linklist-braket {
   color: gold;
   display: inline;
+}
+
+/* Add new keyboard shortcut styles */
+kbd {
+  background-color: var(--code-pre);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+  color: var(--text);
+  display: inline-block;
+  font-size: .85em;
+  font-weight: 600;
+  line-height: 1;
+  padding: 2px 6px;
+  white-space: nowrap;
+  margin: 0 2px;
+}
+
+section {
+  margin-bottom: 30px;
+  background: var(--hover);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+/* Tree Structure Styling */
+.tree ul {
+  list-style: none;
+  padding-left: 25px;
+}
+
+.tree > ul {
+  padding-left: 0;
+}
+
+.tree li {
+  position: relative;
+  padding: 8px 0;
+}
+
+.tree-item {
+  padding: 8px 12px;
+  margin: 4px 0;
+  display: inline-block;
+  border-radius: 4px;
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+a.tree-item {
+  color: var(--link-unviseted);
+}
+
+a.tree-item:hover {
+  color: var(--link-hover);
+  background: var(--hover);
+}
+
+.tree li::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 12px;
+  width: 10px;
+  height: 1px;
+  background: var(--border);
+}
+
+.tree li::after {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+
+.tree li:last-child::after {
+  height: 12px;
+}
+
+h1, h2, h3, h4 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 50px;
+}
+
+.toc a {
+  padding: 12px 0 12px 15px;
+  margin: 8px 0;
+}
+
+br {
+  content: "";
+  display: block;
+  margin: 12px 0;
+}
+
+ul li {
+  margin: 12px 0;
+}
+
+/* Quick Links Styling */
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.quick-link-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.quick-link-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--hover);
+}
+
+.quick-link-text {
+  font-size: 1.1em;
+}
+
+/* Remove emoji-specific styling */
+.quick-link-icon {
+  display: none;
+}
+
+/* Improve tree item spacing */
+.tree-item {
+  padding: 8px 12px;
+  margin: 4px 0;
+  display: inline-block;
+}
+
+/* Add hover effect to non-link tree items */
+span.tree-item {
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+/* Menu Bar Action Styles */
+.menu-bar-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-left: 8px;
+}
+
+.menu-bar-action:hover {
+  background: var(--hover);
+}
+
+.menu-bar-action img {
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.2s ease;
+}
+
+.menu-bar-action:hover img {
+  transform: scale(1.1);
+}
+
+.home-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-home, .toggle-toc-img, .toc-close-img {
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  margin: 0;
+}
+
+.icon-home:hover, .toggle-toc-img:hover, .toc-close-img:hover {
+  opacity: 1;
 }

@@ -1,61 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Bw3ms Stuff</title>
-    <link rel="icon" type="image/png" href="icons/tab_icon.png" id="icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" type="image/png" href="icons/tab_icon.png">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div class="main-container">
-      <div class="content-wrapper">
-        <div id="title">
-          <h1>Bw3ms Stuff</h1>
-          Hey, I'm Bryson.
-          <br>
-          Welcome to my website!
-        </div>
-        <br>
-        <br>
-        <div id="linkList">
-          The index of my pages is:
-          <br>
+      <div class="toc-container" id="tocContainer">
+        <div class="toc">
+          <h3>
+            Navigation
+            <div class="menu-bar-action" data-action="toggle-toc">
+              <img id="close-toc" src="icons/close_toc.svg" alt="Close menu">
+            </div>
+          </h3>
           <ul>
-            <a href="pages/ABT.html" target="_blank">
-              About
-            </a>
-            <br>
-            <a href="pages/WB.html" target="_blank">
-              World Building
-            </a>
-            <br>
-              <a href="pages/MATH.html" target="_blank">
-                Math
-              </a>
-            <br>
-            <br>
-            <a href="pages/PRGZ.html" target="_blank">
-              Programs
-            </a>
-            <div class="linklist-braket">
-              {
-            </div>
-            <ul>
-              <a href="pages/PY.html" target="_blank">
-                Python
-              </a>
-              <br>
-              <a href="pages/WD.html" target="_blank">
-                Web Apps
-              </a>
-            </ul>
-            <div class="linklist-braket">
-              }
-            </div>
+            <li><a href="#welcome">Welcome</a></li>
+            <li><a href="#sitemap">Site Map</a></li>
+            <li><a href="#quicklinks">Quick Links</a></li>
           </ul>
-          If you visit them, I will be very happy :D
         </div>
       </div>
+
+      <div class="content-wrapper">
+        <h1>
+          Bw3m's Space
+          <div class="menu-bar-action" data-action="toggle-toc">
+            <img id="toggle-toc" src="icons/toggle_toc_light.svg" alt="Toggle TOC">
+          </div>
+        </h1>
+
+        <section class="feature-card" id="welcome">
+          <h4>Welcome</h4>
+          <p>Hey, I'm Bryson. Welcome to my digital space where I share my projects, interests, and discoveries!</p>
+        </section>
+
+        <section class="feature-card" id="sitemap">
+          <h4>Site Map</h4>
+          <div class="tree">
+            <ul>
+              <li>
+                <span class="tree-item">Main</span>
+                <ul>
+                  <li><a href="pages/ABT.html" class="tree-item">About Me</a></li>
+                  <li>
+                    <span class="tree-item">Programs</span>
+                    <ul>
+                      <li><a href="pages/PRGZ.html" class="tree-item">Programs Index</a></li>
+                      <li><a href="pages/PY.html" class="tree-item">Python Programs</a></li>
+                      <li><a href="pages/WD.html" class="tree-item">Web Programs</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="tree-item">Other</span>
+                    <ul>
+                      <li><a href="pages/MATH.html" class="tree-item">Mathematics</a></li>
+                      <li><a href="pages/WB.html" class="tree-item">World Building</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
     </div>
     <script src="scripts.js"></script>
   </body>
